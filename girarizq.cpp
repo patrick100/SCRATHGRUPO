@@ -11,19 +11,3 @@ girarizq::girarizq()
 
 }
 
-void girarizq::mouseDoubleClickEvent(QMouseEvent *e)
-{
-
-}
-
-/*void girarizq::mouseDoubleClickEvent( QMouseEvent * e )
-{
-    if ( e->button() == Qt::LeftButton)
-    {
-        qDebug() << "imprimir\n"<<e->x()<<","<<e->y()<<"\n";
-        ingre_datos = datos->toPlainText().toDouble();
-        gat->mover_gato(gat->pos_x+ingre_datos,0);
-        //gat->pos_x = gat->pos_x +10;
-    }
-}
-*/

@@ -36,8 +36,8 @@ ventana::ventana()
     linea->setStyleSheet("background-color:black");
 
     //LA SUBVENTANA DE LA VENTANA DE BOTONES EJECUTAR
-    //pant_ejecutar = new QWidget(pant_botones);
-    //pant_ejecutar->setGeometry(305,0,300,altop);
+    pant_ejecutar = new QWidget(pant_botones);
+    pant_ejecutar->setGeometry(305,0,300,altop);
 
 
 }

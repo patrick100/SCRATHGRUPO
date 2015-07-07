@@ -11,7 +11,6 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = sratchpro
 TEMPLATE = app
 
-CONFIG += c++11
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -19,16 +18,14 @@ SOURCES += main.cpp\
     girarder.cpp \
     girarizq.cpp \
     mover.cpp \
-    ventana.cpp \
-    sprites.cpp
+    ventana.cpp
 
 HEADERS  += mainwindow.h \
     gato.h \
     girarder.h \
     girarizq.h \
     mover.h \
-    ventana.h \
-    sprites.h
+    ventana.h
 
 FORMS    += mainwindow.ui
 

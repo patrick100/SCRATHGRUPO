@@ -1,19 +1,18 @@
 #ifndef MOVER_H
 #define MOVER_H
 #include "gato.h"
-#include "sprites.h"
+
 #include <QTextEdit>
+#include <QLabel>
 #include <QMouseEvent>
 #include <QDebug>
 
-
-class mover:public sprites
+class mover:public QLabel
 {
 private:
 
 protected:
     gato *gat;
-    //DONDE SE VA HA INICIAR X ,Y
     tam x=0;
     tam y=10;
 public:
