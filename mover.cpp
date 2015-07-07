@@ -8,9 +8,8 @@ mover::mover(gato *g)
         this->setGeometry(x,y,ancho,alto);
         datos = new QTextEdit(this);
         datos->setGeometry(54,2,30,30);
-
-
 }
+
 
 void mover::mouseDoubleClickEvent( QMouseEvent * e )
 {
@@ -18,7 +17,7 @@ void mover::mouseDoubleClickEvent( QMouseEvent * e )
     {
         qDebug() << "imprimir\n"<<e->x()<<","<<e->y()<<"\n";
         ingre_datos = datos->toPlainText().toDouble();
-        gat->mover_gato(gat->pos_x+ingre_datos,0);
-        //gat->pos_x = gat->pos_x +10;
+        gat->set_posx(gat->get_posx()+ingre_datos);
+        gat->mover_gato(gat->get_posx(),0);
     }
 }

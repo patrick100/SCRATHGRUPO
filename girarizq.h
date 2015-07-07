@@ -3,18 +3,21 @@
 #include "gato.h"
 #include <QTextEdit>
 #include <QLabel>
+#include <QMouseEvent>
+#include <QDebug>
+#include "sprites.h"
 
-
-class girarizq:public QLabel
+class girarizq:public sprites
 {
 protected:
+    //DONDE SE VA HA INICIAR X ,Y
     tam x=0;
     tam y=150;
+    gato *gat;
+
 public:
     girarizq();
-    //void mouseDoubleClickEvent(QMouseEvent * e , gato *cat);
-    tam alto = 40;
-    tam ancho = 140;
+    void mouseDoubleClickEvent(QMouseEvent * e );
     tam ingre_datos;
     QTextEdit *datos;
 };

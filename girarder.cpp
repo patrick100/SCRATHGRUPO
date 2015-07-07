@@ -10,3 +10,8 @@ girarder::girarder()
         ingre_datos = datos->toPlainText().toDouble();
 }
 
+void girarder::mouseDoubleClickEvent(QMouseEvent *e)
+{
+
+}
+

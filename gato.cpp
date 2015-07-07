@@ -13,24 +13,24 @@ gato::gato()
 
 
 
-void gato::set_posx(cifra x){
+void gato::set_posx(tam x){
     pos_x = x;
 }
 
-void gato::set_posy(cifra y){
+void gato::set_posy(tam y){
     pos_y = y;
 }
 
-cifra gato::get_posx(){
+tam gato::get_posx(){
     return pos_x;
 }
 
-cifra gato::get_posy(){
+tam gato::get_posy(){
     return pos_y;
 }
 
 
-void gato::mover_gato(cifra a, cifra b){
+void gato::mover_gato(tam a, tam b){
     set_posx(a);
     set_posy(b);
     this->setGeometry(get_posx(),get_posy(),100,100);

@@ -3,28 +3,27 @@
 #include <QGraphicsPixmapItem>
 #include <QLabel>
 #include <QWidget>
-
-typedef int (tam);
-typedef double(cifra);
+#include "sprites.h"
 
 
-class gato:public QLabel
-{
-    private:
 
+class gato:public sprites{
 
-    public:
-        cifra pos_x;
-        cifra pos_y;
-        gato();
-        cifra get_posx();
-        cifra get_posy();
+public:
 
-        void set_posy(cifra);
-        void set_posx(cifra);
+    gato();
+    tam get_posx();
+    tam get_posy();
 
-        void mover_gato(cifra a,cifra b);
+    void set_posy(tam);
+    void set_posx(tam);
 
+    void mover_gato(tam a,tam b);
+
+private:
+    //DONDE SE VA HA INICIAR X ,Y
+    tam pos_x;
+    tam pos_y;
 };
 
 
