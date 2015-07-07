@@ -29,21 +29,25 @@ tam sprites::get_ejey()
 
 void sprites::mouseMoveEvent(QMouseEvent *e)
 {
-    if(e->buttons()==Qt::LeftButton){
+    if(e->buttons()==Qt::LeftButton)
+    {
+        moversprites(e->x(),e->y(),140,40);
+        qDebug() << "move to\n"<<e->x()<<","<<e->y()<<"\n";   
+    }
 
-        //e->mouseState;
-        moversprites(e->x(),e->y());
-        qDebug() << "move to\n"<<e->x()<<","<<e->y()<<"\n";
-
+    if(e->buttons()==Qt::RightButton)
+    {
+    moversprites(e->x(),e->y(),90,90);
+    qDebug() << "move to\n"<<e->x()<<","<<e->y()<<"\n";
     }
 }
 
- void sprites::moversprites(tam a, tam b)
+ void sprites::moversprites(tam a, tam b, tam alt, tam anch)
 {
 
    set_ejex(get_ejex()+a);
    set_ejey(get_ejey()+b);
-   this->setGeometry(get_ejex(),get_ejey(),140,40);
+   this->setGeometry(get_ejex(),get_ejey(),alt,anch);
 }
 
 

@@ -16,7 +16,7 @@ void mover::mouseDoubleClickEvent( QMouseEvent * e )
     if ( e->button() == Qt::LeftButton)
     {
         qDebug() << "imprimir\n"<<e->x()<<","<<e->y()<<"\n";
-        ingre_datos = datos->toPlainText().toDouble();
+        ingre_datos = datos->toPlainText().toInt();
         gat->set_posx(gat->get_posx()+ingre_datos);
         gat->mover_gato(gat->get_posx(),0);
     }

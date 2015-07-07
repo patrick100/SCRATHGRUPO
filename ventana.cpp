@@ -27,8 +27,8 @@ ventana::ventana()
 
     giroder = new girarder();
     giroder->setParent(pant_botones);
-    giroizq = new girarizq();
-    giroizq->setParent(pant_botones);
+    //giroizq = new girarizq();
+    //giroizq->setParent(pant_botones);
 
     //IMPRIME UNA LINEA PARA SEPARAR LAS 2 PANTALLAS
     linea = new QWidget(this);

@@ -7,11 +7,11 @@ girarder::girarder()
 
         datos = new QTextEdit(this);
         datos->setGeometry(54,2,30,30);
-        ingre_datos = datos->toPlainText().toDouble();
+        ingre_datos = datos->toPlainText().toInt();
 }
 
-void girarder::mouseDoubleClickEvent(QMouseEvent *e)
+/*void girarder::mouseDoubleClickEvent(QMouseEvent *e)
 {
 
 }
-
+*/

@@ -12,6 +12,10 @@ class gato:public sprites{
 public:
 
     gato();
+
+    tam pos_x;
+    tam pos_y;
+
     tam get_posx();
     tam get_posy();
 
@@ -22,8 +26,7 @@ public:
 
 private:
     //DONDE SE VA HA INICIAR X ,Y
-    tam pos_x;
-    tam pos_y;
+
 };
 
 

@@ -1,8 +1,6 @@
 #ifndef GIRARDER_H
 #define GIRARDER_H
-#include "gato.h"
 #include <QTextEdit>
-#include <QLabel>
 #include "sprites.h"
 
 class girarder:public sprites
@@ -13,7 +11,7 @@ protected:
     tam y=60;
 public:
     girarder();
-    void mouseDoubleClickEvent(QMouseEvent * e );
+    //void mouseDoubleClickEvent(QMouseEvent * e );
     tam alto = 40;
     tam ancho = 140;
     tam ingre_datos;

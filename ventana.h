@@ -6,7 +6,7 @@
 
 #include "mover.h"
 #include "girarder.h"
-#include "girarizq.h"
+
 
 
 typedef double(cifra);
@@ -20,7 +20,6 @@ class ventana:public QMainWindow
     gato *gat;
     mover *move;
     girarder *giroder;
-    girarizq *giroizq;
 
     public:
     ventana();

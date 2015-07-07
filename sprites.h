@@ -27,7 +27,7 @@ protected://TODO SE HEREDA
     tam get_ejey();
 
     void mouseMoveEvent(QMouseEvent *e);
-    void moversprites(tam a, tam b);
+    void moversprites(tam a, tam b,tam alt,tam anch);
 };
 
 #endif // SPRITES_H
