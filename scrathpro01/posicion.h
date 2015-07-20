@@ -11,14 +11,12 @@
 class posicion:public sprites
 {
 private:
-
-protected:
-    gato *gat;
     //DONDE SE VA HA INICIAR X ,Y
     tam x=0;
     tam y=600;
 
 public:
+    gato *gat;
     posicion(gato *g, ventanabotones *pantalla);
     tam alto = 30;
     tam ancho = 150;

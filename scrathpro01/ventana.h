@@ -6,6 +6,11 @@
 #include "girarder.h"
 #include "ventanabotones.h"
 #include "ventanacat.h"
+#include "lapiz.h"
+#include "punto.h"
+#include "control.h"
+#include "controlfinal.h"
+
 
 typedef double(cifra);
 
@@ -18,8 +23,10 @@ class ventana:public QMainWindow
     mover *move;
     girarder *giroder;
     posicion *posc;
-    //bajarlapiz *lapiz;
-    //punto *punt;
+    lapiz *pincel;
+    punto *punt;
+    control *padre;
+    controlfinal *botonend;
     //void conectarsprites();
 
     public:

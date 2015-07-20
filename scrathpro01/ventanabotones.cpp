@@ -6,9 +6,9 @@ ventanabotones::ventanabotones(QWidget *total)
     this->setStyleSheet("background-color:#AE6161;");
     this->setParent(total);
 
-    ejecucion=new QWidget(this);
-    ejecucion->setGeometry(250,0,350,altop);
-    ejecucion->setStyleSheet("background-color:#DE7979;");
+    linea=new QWidget(this);
+    linea->setGeometry(255,0,5,altop);
+    linea->setStyleSheet("background-color:red;");
 
 
 }

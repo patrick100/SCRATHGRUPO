@@ -21,7 +21,11 @@ SOURCES += main.cpp\
     ventana.cpp \
     posicion.cpp \
     ventanacat.cpp \
-    ventanabotones.cpp
+    ventanabotones.cpp \
+    lapiz.cpp \
+    punto.cpp \
+    control.cpp \
+    controlfinal.cpp
 
 HEADERS  += mainwindow.h \
     gato.h \
@@ -31,9 +35,15 @@ HEADERS  += mainwindow.h \
     ventana.h \
     posicion.h \
     ventanacat.h \
-    ventanabotones.h
+    ventanabotones.h \
+    lapiz.h \
+    punto.h \
+    control.h \
+    controlfinal.h
 
 FORMS    += mainwindow.ui
 
 RESOURCES += \
     image.qrc
+
+DISTFILES +=

@@ -10,14 +10,15 @@ class girarder:public sprites
 {
 protected:
     //DONDE SE VA HA INICIAR X ,Y
+    gato *gat;
     tam x=0;
     tam y=60;
     tam girox;
     tam giroy;
 public:
     girarder(gato *g, ventanabotones *pantalla);
+    //multithreading
     void ejecutar();
-    gato *gat;
     tam alto = 30;
     tam ancho = 170;
     tam ingre_datos;

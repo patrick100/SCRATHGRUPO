@@ -35,7 +35,9 @@ void girarder::ejecutar()
         p.end();
         rotatePixmap.save(":/temp.png");
         gat->setPixmap(rotatePixmap);
-        //gat->setgiro(ingre_datos)
+        gat->giro = gat->giro + ingre_datos;
+
+        gat->rotacionactivada = true;
         //gat->move(QPoint(gat->get_posx(), gat->get_posy()));
 
 }
@@ -46,6 +48,5 @@ void girarder::crearnuevoboton()
         obj= new girarder(gat,pant);
         obj->show();
         pant->addboton(obj);
-
 }
 

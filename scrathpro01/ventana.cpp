@@ -25,8 +25,14 @@ ventana::ventana()
     botones->addboton(giroder);
 
 
-    //lapiz = new bajarlapiz(programa->getcat(),botones);
-    //botones->addboton(lapiz);
+    pincel = new lapiz(programa->getcat(),programa->getpunto(),botones);
+    botones->addboton(pincel);
+
+    padre = new control(programa->getcat(),botones);
+    botones->addboton(padre);
+
+    botonend = new controlfinal(programa->getcat(),botones);
+    botones->addboton(botonend);
 
     //Muestra todos los botones desde el vector
     botones->mostrar_botones();

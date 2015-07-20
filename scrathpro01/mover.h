@@ -10,16 +10,14 @@ class mover:public sprites
 {
 private:
 
-protected:
-    gato *gat;
-    //DONDE SE VA HA INICIAR X ,Y
 
 public:
     mover(gato *g, ventanabotones *pantalla);
     tam x=0;
     tam y=10;
+    gato *gat;
     void crearnuevoboton();
-    //multitheaning
+    //multithreading
     void ejecutar();
 
     tam alto = 30;

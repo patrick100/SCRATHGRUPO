@@ -6,5 +6,7 @@
         <file>posicion.png</file>
         <file>punto.png</file>
         <file>lapiz.png</file>
+        <file>end.png</file>
+        <file>repetir.png</file>
     </qresource>
 </RCC>

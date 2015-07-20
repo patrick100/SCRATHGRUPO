@@ -11,7 +11,7 @@ class ventanabotones:public QWidget
 {
 public:
     ventanabotones(QWidget *total);
-    QWidget *ejecucion;
+    QWidget *linea;
     tam altop = 700;
     std::vector<QLabel*> botones;
 

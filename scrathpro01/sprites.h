@@ -6,18 +6,26 @@
 #include <QPainter>
 #include "ventanabotones.h"
 
+
+
+
 typedef int (tam);
 
 class sprites:public QLabel
 {
 public:
     sprites();
+
     void set_ejex(tam);
     void set_ejey(tam);
     tam get_ejex();
     tam get_ejey();
     void moversprites(tam a, tam b,tam alt,tam anch);
     void movergato(tam a,tam b);
+
+    tam alto = 40;
+    tam ancho = 140;
+    ventanabotones *pant;
 
     tam ejex=0;
     tam ejey=0;
@@ -32,13 +40,9 @@ protected://TODO SE HEREDA
     void mouseReleaseEvent(QMouseEvent * event);
     void mouseDoubleClickEvent(QMouseEvent * event);
 
-    tam alto = 40;
-    tam ancho = 140;
-    ventanabotones *pant;
     //metodos virtuales puros
     virtual void crearnuevoboton()=0;
     virtual void ejecutar()=0;
-
 
 };
 
