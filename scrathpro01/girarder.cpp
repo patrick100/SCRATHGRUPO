@@ -17,15 +17,10 @@ girarder::girarder(gato *g, ventanabotones *pantalla)
 
 }
 
-void girarder::mouseDoubleClickEvent(QMouseEvent *evento)
+void girarder::ejecutar()
 {
-
-    if ( evento->button() == Qt::LeftButton)
-    {
-
         ingre_datos = datos->toPlainText().toInt();
         QPixmap sourceImage(*gat->pixmap());
-
         QPixmap rotatePixmap(sourceImage.size());
         rotatePixmap.fill(Qt::transparent);
         QTransform transform;
@@ -38,10 +33,10 @@ void girarder::mouseDoubleClickEvent(QMouseEvent *evento)
         p.setTransform(transform);
         p.drawPixmap(0, 0, sourceImage);
         p.end();
-        rotatePixmap.save(":/gato.png");
+        rotatePixmap.save(":/temp.png");
         gat->setPixmap(rotatePixmap);
-        gat->move(QPoint(gat->get_posx(), gat->get_posy()));
-      }
+        //gat->setgiro(ingre_datos)
+        //gat->move(QPoint(gat->get_posx(), gat->get_posy()));
 
 }
 

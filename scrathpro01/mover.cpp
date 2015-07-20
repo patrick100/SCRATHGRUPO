@@ -12,11 +12,8 @@ mover::mover(gato *g, ventanabotones *pantalla)
 }
 
 
-void mover::mouseDoubleClickEvent( QMouseEvent * event )
+void mover::ejecutar()
 {
-    if ( event->button() == Qt::LeftButton)
-    {
-        qDebug() << "imprimir\n"<<event->x()<<","<<event->y()<<"\n";
         ingre_datos = datos->toPlainText().toInt();
 
         gat->set_posx(gat->get_posx()+ingre_datos);
@@ -24,7 +21,6 @@ void mover::mouseDoubleClickEvent( QMouseEvent * event )
 
         gat->mover_gato(gat->get_posx(),gat->get_posy());
 
-    }
 }
 
 void mover::crearnuevoboton()

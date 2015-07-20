@@ -18,8 +18,10 @@ public:
     mover(gato *g, ventanabotones *pantalla);
     tam x=0;
     tam y=10;
-    void mouseDoubleClickEvent(QMouseEvent * event );
     void crearnuevoboton();
+    //multitheaning
+    void ejecutar();
+
     tam alto = 30;
     tam ancho = 140;
     tam ingre_datos;

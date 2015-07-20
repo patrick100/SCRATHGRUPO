@@ -16,7 +16,7 @@ protected:
     tam giroy;
 public:
     girarder(gato *g, ventanabotones *pantalla);
-    void mouseDoubleClickEvent(QMouseEvent * evento );
+    void ejecutar();
     gato *gat;
     tam alto = 30;
     tam ancho = 170;

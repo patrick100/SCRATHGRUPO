@@ -4,7 +4,6 @@
 #include <QMouseEvent>
 #include <QDebug>
 #include <QPainter>
-#include <QDrag>
 #include "ventanabotones.h"
 
 typedef int (tam);
@@ -29,10 +28,16 @@ protected://TODO SE HEREDA
 
     void mouseMoveEvent(QMouseEvent *event);
     void mousePressEvent(QMouseEvent *event);
+
+    void mouseReleaseEvent(QMouseEvent * event);
+    void mouseDoubleClickEvent(QMouseEvent * event);
+
     tam alto = 40;
     tam ancho = 140;
     ventanabotones *pant;
-    virtual void crearnuevoboton(){};
+    //metodos virtuales puros
+    virtual void crearnuevoboton()=0;
+    virtual void ejecutar()=0;
 
 
 };

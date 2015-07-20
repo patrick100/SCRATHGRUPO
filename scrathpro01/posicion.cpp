@@ -15,11 +15,8 @@ posicion::posicion(gato *g, ventanabotones *pantalla)
 }
 
 
-void posicion::mouseDoubleClickEvent( QMouseEvent * e )
+void posicion::ejecutar()
 {
-    if ( e->button() == Qt::LeftButton)
-    {
-        qDebug() << "imprimir\n"<<e->x()<<","<<e->y()<<"\n";
         dato_x = datox->toPlainText().toInt();
         dato_y = datoy->toPlainText().toInt();
 
@@ -27,9 +24,9 @@ void posicion::mouseDoubleClickEvent( QMouseEvent * e )
         gat->set_posy(dato_y);
 
         gat->mover_gato(gat->get_posx(),gat->get_posy());
-
-    }
 }
+
+
 
 void posicion::crearnuevoboton()
 {

@@ -20,12 +20,11 @@ protected:
 
 public:
     posicion(gato *g, ventanabotones *pantalla);
-    void mouseDoubleClickEvent(QMouseEvent * e );
     tam alto = 30;
     tam ancho = 150;
     tam dato_x;
     tam dato_y;
-
+    void ejecutar();
     QTextEdit *datox;
     QTextEdit *datoy;
 
