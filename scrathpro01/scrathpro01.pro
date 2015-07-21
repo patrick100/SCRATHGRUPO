@@ -25,7 +25,9 @@ SOURCES += main.cpp\
     lapiz.cpp \
     punto.cpp \
     control.cpp \
-    controlfinal.cpp
+    controlfinal.cpp \
+    guardar.cpp \
+    botonejecutar.cpp
 
 HEADERS  += mainwindow.h \
     gato.h \
@@ -39,7 +41,9 @@ HEADERS  += mainwindow.h \
     lapiz.h \
     punto.h \
     control.h \
-    controlfinal.h
+    controlfinal.h \
+    guardar.h \
+    botonejecutar.h
 
 FORMS    += mainwindow.ui
 

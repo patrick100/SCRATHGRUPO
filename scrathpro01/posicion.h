@@ -1,10 +1,6 @@
 #ifndef POSICION_H
 #define POSICION_H
-#include "gato.h"
 #include "sprites.h"
-#include <QTextEdit>
-#include <QMouseEvent>
-#include <QDebug>
 
 
 
@@ -16,7 +12,6 @@ private:
     tam y=600;
 
 public:
-    gato *gat;
     posicion(gato *g, ventanabotones *pantalla);
     tam alto = 30;
     tam ancho = 150;

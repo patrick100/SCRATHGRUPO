@@ -17,6 +17,7 @@ public:
 
     void addboton(QLabel *nuevo);
     void sacarboton(QLabel *nuevo);
+    void guardarboton();
     void mostrar_botones();
     QWidget *pant;
 

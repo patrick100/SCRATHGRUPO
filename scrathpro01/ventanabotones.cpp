@@ -31,6 +31,7 @@ void ventanabotones::sacarboton(QLabel *nuevo)
     }
 }
 
+
 // llamar a la funcion
 
 void mostrar (QLabel * i) {
@@ -40,9 +41,7 @@ void ocultar(QLabel * i) {
   i->hide();
 }
 
-
 void ventanabotones::mostrar_botones()
 {
     std::for_each(botones.begin(),botones.end(),mostrar);
 }
-

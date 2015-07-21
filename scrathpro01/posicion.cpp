@@ -2,7 +2,8 @@
 
 posicion::posicion(gato *g, ventanabotones *pantalla)
 {
-        gat = g;
+        ID = 'p';
+        player = g;
         pant = pantalla;
         this->setPixmap(QPixmap(":/posicion.png"));
         this->setGeometry(x,y,ancho,alto);
@@ -19,11 +20,9 @@ void posicion::ejecutar()
 {
         dato_x = datox->toPlainText().toInt();
         dato_y = datoy->toPlainText().toInt();
-
-        gat->set_posx(dato_x);
-        gat->set_posy(dato_y);
-
-        gat->mover_gato(gat->get_posx(),gat->get_posy());
+        player->set_posx(dato_x);
+        player->set_posy(dato_y);
+        player->mover_gato();
 }
 
 
@@ -31,7 +30,7 @@ void posicion::ejecutar()
 void posicion::crearnuevoboton()
 {
         posicion *obj;
-        obj = new posicion(gat,pant);
+        obj = new posicion(player,pant);
         obj->show();
         pant->addboton(obj);
 

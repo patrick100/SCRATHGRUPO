@@ -2,7 +2,8 @@
 
 lapiz::lapiz(gato *g, punto *punt,ventanabotones *pantalla)
 {
-    gat = g;
+    ID = 'l';
+    player = g;
     pant = pantalla;
     puntto = punt;
 
@@ -15,18 +16,14 @@ lapiz::lapiz(gato *g, punto *punt,ventanabotones *pantalla)
 
 void lapiz::crearnuevoboton()
 {
-    lapiz *pencil = new lapiz(gat,puntto,pant);
+    lapiz *pencil = new lapiz(player,puntto,pant);
     pencil->show();
     pant->addboton(pencil);
 }
 
+
 void lapiz::ejecutar()
 {
-   tam temp = 100 ;
-   puntto->printpoint(temp);
+   puntto->printpoint();
 
-
-   gat->set_posx(gat->get_posx()+temp);
-   gat->set_posy(gat->get_posy());
-   gat->mover_gato(gat->get_posx(),gat->get_posy());
 }

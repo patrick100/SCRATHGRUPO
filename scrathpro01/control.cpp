@@ -1,9 +1,11 @@
 #include "control.h"
+//typedef gato* (player)
 
 control::control(gato *g,ventanabotones *pantalla)
 {
-    gat = g;
+    player = g;
     pant = pantalla;
+    ID = 'c';
 
     this->setPixmap(QPixmap(":/repetir.png"));
 
@@ -17,7 +19,7 @@ control::control(gato *g,ventanabotones *pantalla)
 
 void control::crearnuevoboton()
 {
-    control *cont = new control(gat,pant);
+    control *cont = new control(player,pant);
     cont->show();
     pant->addboton(cont);
 }

@@ -8,5 +8,9 @@
         <file>lapiz.png</file>
         <file>end.png</file>
         <file>repetir.png</file>
+        <file>guardar.png</file>
+        <file>ejecutar.png</file>
+        <file>ejecutar2.png</file>
+        <file>ejecutar3.png</file>
     </qresource>
 </RCC>

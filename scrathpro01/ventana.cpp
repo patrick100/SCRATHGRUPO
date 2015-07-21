@@ -14,7 +14,7 @@ ventana::ventana()
     //PARA MOSTRAR LOS BOTONES LOS INGRESO EN EL VECTOR DONDE EXISTE SHOW PERO PARA ELLO
     //TENGO QUE ENVIARLE EN SU CONSTRUCTOR DE BOTONES EL LA PANTALLA A LA QUE PERTENECE
 
-    move = new mover(programa->getcat(),botones);
+    move = new mover(programa->getcat(),programa->punt,botones);
     botones->addboton(move);
 
 
@@ -33,6 +33,9 @@ ventana::ventana()
 
     botonend = new controlfinal(programa->getcat(),botones);
     botones->addboton(botonend);
+
+    ejecucion = new botonejecutar(programa->getcat(),botones);
+    botones->addboton(ejecucion);
 
     //Muestra todos los botones desde el vector
     botones->mostrar_botones();

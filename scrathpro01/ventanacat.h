@@ -2,6 +2,7 @@
 #define VENTANACAT_H
 #include "gato.h"
 #include "punto.h"
+#include "guardar.h"
 #include <QWidget>
 
 typedef int (tam);
@@ -14,6 +15,7 @@ public:
     tam altop=700;
     gato *gat;
     punto *punt;
+    guardar *disco;
     inline gato* getcat(){return gat;}
     inline punto* getpunto(){return punt;}
 

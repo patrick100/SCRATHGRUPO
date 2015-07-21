@@ -1,10 +1,10 @@
 #ifndef GATO_H
 #define GATO_H
-#include <QGraphicsPixmapItem>
 #include <QLabel>
 #include <QWidget>
-#include "sprites.h"
 
+typedef int (tam);
+typedef double (cifra);
 
 
 class gato:public QLabel//:public sprites
@@ -17,20 +17,25 @@ public:
     tam posx;
     tam posy;
 
-    tam giro;
+    cifra giro;
 
-    tam gradox=0;
-    tam gradoy=0;
+    cifra gradox=0;
+    cifra gradoy=0;
+
+    tam xgenerado=0;
+
+    bool pincelabajo = false;
 
     tam get_posx();
     tam get_posy();
 
+    tam datomover =0;
 
-    bool rotacionactivada;
     void set_posy(tam);
     void set_posx(tam);
-    void mover_gato(tam a,tam b);
+    void mover_gato();
     void creandogrados();
+    void mover_con_giro(tam pasos);
 
 private:
     //DONDE SE VA HA INICIAR X ,Y

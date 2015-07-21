@@ -1,9 +1,5 @@
 #ifndef LAPIZ_H
 #define LAPIZ_H
-#include "gato.h"
-#include "sprites.h"
-#include <QTextEdit>
-#include <QMouseEvent>
 #include "sprites.h"
 #include "punto.h"
 
@@ -14,7 +10,6 @@ public:
     tam x=0;
     tam y=400;
     punto *puntto;
-    gato *gat;
 
     void crearnuevoboton();
 

@@ -1,13 +1,14 @@
 #include "girarder.h"
 #include <QPixmap>
-#include <QMatrix>
 #include <QTransform>
 #include <QPainter>
 
 
 girarder::girarder(gato *g, ventanabotones *pantalla)
 {
-        gat = g;
+        player = g;
+        ID = 'g';
+
         this->setPixmap(QPixmap(":/girar_der.png"));
         this->setGeometry(x,y,ancho,alto);
         pant = pantalla;
@@ -20,32 +21,42 @@ girarder::girarder(gato *g, ventanabotones *pantalla)
 void girarder::ejecutar()
 {
         ingre_datos = datos->toPlainText().toInt();
-        QPixmap sourceImage(*gat->pixmap());
-        QPixmap rotatePixmap(sourceImage.size());
-        rotatePixmap.fill(Qt::transparent);
-        QTransform transform;
-        transform.translate(sourceImage.size().width() / 2, sourceImage.size().height() / 2);
-        transform.rotate(ingre_datos);
-        transform.translate(-sourceImage.size().width() / 2, -sourceImage.size().height() / 2);
-        QPainter p;
-        p.setRenderHints(QPainter::Antialiasing|QPainter::SmoothPixmapTransform, true);
-        p.begin(&rotatePixmap);
-        p.setTransform(transform);
-        p.drawPixmap(0, 0, sourceImage);
-        p.end();
-        rotatePixmap.save(":/temp.png");
-        gat->setPixmap(rotatePixmap);
-        gat->giro = gat->giro + ingre_datos;
+        rotarplayer(ingre_datos);
 
-        gat->rotacionactivada = true;
-        //gat->move(QPoint(gat->get_posx(), gat->get_posy()));
+}
+
+void girarder::rotarplayer(tam grados)
+{
+
+    QPixmap sourceImage(*player->pixmap());
+    QPixmap rotatePixmap(sourceImage.size());
+    rotatePixmap.fill(Qt::transparent);
+
+    QTransform transform;
+    transform.translate(sourceImage.size().width() / 2, sourceImage.size().height() / 2);
+
+    transform.rotate(grados);
+
+    transform.translate(-sourceImage.size().width() / 2, -sourceImage.size().height() / 2);
+
+    QPainter p;
+
+    p.begin(&rotatePixmap);
+    p.setTransform(transform);
+    p.drawPixmap(0, 0, sourceImage);
+    p.end();
+
+    rotatePixmap.save(":/temp.png");
+
+    player->setPixmap(rotatePixmap);
+    player->giro = grados;
 
 }
 
 void girarder::crearnuevoboton()
 {
         girarder *obj;
-        obj= new girarder(gat,pant);
+        obj= new girarder(player,pant);
         obj->show();
         pant->addboton(obj);
 }

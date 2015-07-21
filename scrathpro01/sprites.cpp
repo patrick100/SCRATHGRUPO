@@ -29,18 +29,21 @@ tam sprites::get_ejey()
    set_ejex(get_ejex()+a);
    set_ejey(get_ejey()+b);
    this->setGeometry(get_ejex(),get_ejey(),alt,anch);
- }
+}
+
 
 
 
 
  void sprites::mouseMoveEvent(QMouseEvent *event)
- {
+{
 
      if(event->buttons()==Qt::LeftButton && event->globalX()<600)
      {
         moversprites(event->x(),event->y(),170,30);
      }
+
+
 }
 
 
@@ -55,6 +58,7 @@ tam sprites::get_ejey()
 
  }
 
+
  void sprites::mouseReleaseEvent(QMouseEvent *event)
  {
      if(this->get_ejex()<=255-80){
@@ -62,6 +66,7 @@ tam sprites::get_ejey()
      }
 
 }
+
 
  void sprites::mouseDoubleClickEvent(QMouseEvent *event)
  {

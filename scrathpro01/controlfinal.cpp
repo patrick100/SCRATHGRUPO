@@ -2,7 +2,7 @@
 
 controlfinal::controlfinal(gato *g,ventanabotones *pantalla)
 {
-    gat = g;
+    player = g;
     pant = pantalla;
 
     this->setPixmap(QPixmap(":/end.png"));
@@ -13,7 +13,7 @@ controlfinal::controlfinal(gato *g,ventanabotones *pantalla)
 
 void controlfinal::crearnuevoboton()
 {
-    controlfinal *obj = new controlfinal(gat,pant);
+    controlfinal *obj = new controlfinal(player,pant);
     obj->show();
     pant->addboton(obj);
 

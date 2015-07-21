@@ -8,14 +8,14 @@ typedef int (tam);
 class punto:public QLabel
 {
 public:
-    punto(gato *gat, QWidget *pantalla);
-    gato *gat;
+    punto(gato *g , QWidget *pantalla);
+    gato *player;
     QWidget *pant;
     tam ancho=5;
     tam alto=5;
     tam x;
     tam y;
-    void printpoint(tam longitud);
+    void printpoint();
     void crearlinea();
 };
 

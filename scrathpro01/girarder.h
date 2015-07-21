@@ -1,16 +1,11 @@
 #ifndef GIRARDER_H
 #define GIRARDER_H
-#include <QTextEdit>
 #include "sprites.h"
-#include "gato.h"
-#include <math.h>
-#include <qgraphicsitem.h>
 
 class girarder:public sprites
 {
 protected:
     //DONDE SE VA HA INICIAR X ,Y
-    gato *gat;
     tam x=0;
     tam y=60;
     tam girox;
@@ -19,6 +14,7 @@ public:
     girarder(gato *g, ventanabotones *pantalla);
     //multithreading
     void ejecutar();
+    void rotarplayer(tam grados);
     tam alto = 30;
     tam ancho = 170;
     tam ingre_datos;

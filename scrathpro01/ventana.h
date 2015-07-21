@@ -10,6 +10,7 @@
 #include "punto.h"
 #include "control.h"
 #include "controlfinal.h"
+#include "botonejecutar.h"
 
 
 typedef double(cifra);
@@ -27,6 +28,7 @@ class ventana:public QMainWindow
     punto *punt;
     control *padre;
     controlfinal *botonend;
+    botonejecutar *ejecucion;
     //void conectarsprites();
 
     public:

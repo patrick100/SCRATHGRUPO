@@ -7,5 +7,6 @@ ventanacat::ventanacat(QWidget *total)
     this->setParent(total);
     gat = new gato(this); //this es la pantallacat
     punt = new punto(gat,this);
+    disco = new guardar(this);
 }
 
