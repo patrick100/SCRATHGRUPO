@@ -17,9 +17,25 @@ public:
     tam ancho = 150;
     tam dato_x;
     tam dato_y;
+
+    tam t1x = 73;
+    tam t1y = 1;
+    tam t1ancho =25;
+    tam t1alto = 25;
+
+    tam t2x = 118;
+    tam t2y = 1;
+    tam t2ancho = 27;
+    tam t2alto =25;
+
+
+    QString virtual enviardatos();
+    virtual void abrir(QTextStream & text);
+
     void ejecutar();
     QTextEdit *datox;
     QTextEdit *datoy;
+    QTextEdit *datos;
 
     void crearnuevoboton();
 };

@@ -1,4 +1,5 @@
 #include "ventanabotones.h"
+#include "sprites.h"
 
 ventanabotones::ventanabotones(QWidget *total)
 {
@@ -13,15 +14,15 @@ ventanabotones::ventanabotones(QWidget *total)
 
 }
 
-void ventanabotones::addboton(QLabel *nuevo)
+void ventanabotones::addboton(sprites *nuevo)
 {
     botones.push_back(nuevo);
 }
 
 
-void ventanabotones::sacarboton(QLabel *nuevo)
+void ventanabotones::sacarboton(sprites *nuevo)
 {
-    std::vector<QLabel*>::iterator it;//declaro it de tipo vector qlabel
+    std::vector<sprites*>::iterator it;//declaro it de tipo vector qlabel
 
     it=std::find(botones.begin(),botones.end(),nuevo);
 

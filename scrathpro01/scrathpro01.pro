@@ -23,11 +23,11 @@ SOURCES += main.cpp\
     ventanacat.cpp \
     ventanabotones.cpp \
     lapiz.cpp \
-    punto.cpp \
     control.cpp \
     controlfinal.cpp \
     guardar.cpp \
-    botonejecutar.cpp
+    botonejecutar.cpp \
+    abrir.cpp
 
 HEADERS  += mainwindow.h \
     gato.h \
@@ -39,11 +39,12 @@ HEADERS  += mainwindow.h \
     ventanacat.h \
     ventanabotones.h \
     lapiz.h \
-    punto.h \
     control.h \
     controlfinal.h \
     guardar.h \
-    botonejecutar.h
+    botonejecutar.h \
+    tipo.h \
+    abrir.h
 
 FORMS    += mainwindow.ui
 

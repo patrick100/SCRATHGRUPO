@@ -7,16 +7,20 @@
 
 typedef int (tam);
 
+class sprites;
+
 class ventanabotones:public QWidget
 {
 public:
     ventanabotones(QWidget *total);
     QWidget *linea;
-    tam altop = 700;
-    std::vector<QLabel*> botones;
 
-    void addboton(QLabel *nuevo);
-    void sacarboton(QLabel *nuevo);
+    tam altop = 700;
+
+    std::vector<sprites*> botones;
+
+    void addboton(sprites *nuevo);
+    void sacarboton(sprites *nuevo);
     void guardarboton();
     void mostrar_botones();
     QWidget *pant;

@@ -9,6 +9,8 @@ public:
     controlfinal(gato *g, ventanabotones *pantalla);
     tam x= 0;
     tam y= 150;
+    tam ancho = 170;
+    tam alto = 30;
 
 
     void crearnuevoboton();

@@ -15,7 +15,15 @@ public:
     tam alto=5;
     tam x;
     tam y;
+    tam dx;
+    tam dy;
+    tam i =0;
+    tam distancia =5;
     void printpoint();
+    void punto_con_giro();
+
+
+
     void crearlinea();
 };
 

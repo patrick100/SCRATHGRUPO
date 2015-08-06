@@ -2,15 +2,29 @@
 #define GUARDAR_H
 #include <QLabel>
 //#include "ventanabotones.h"
+#include "tipo.h"
+#include "gato.h"
+#include "sprites.h"
+#include <QFileDialog>
+#include <QDebug>
+#include <windows.h>
+#include <QMessageBox>
+
 
 class guardar:public QLabel
 {
 
 public:
-    guardar(QWidget *pantalla_gato);
-    void mouseDoubleClickEvent(QMouseEvent *event);
-    //ventanabotones *pant_boton;
+    guardar(gato *gat,QWidget *pantalla_gato);
+    void mousePressEvent(QMouseEvent * event);
+    //ventanabotones *pant_boton;}
+    QString file="";
 
+    gato *player;
+    tam x = 700;
+    tam y = 570;
+    tam ancho = 60;
+    tam alto = 60;
 
 };
 

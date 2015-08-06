@@ -4,10 +4,8 @@ controlfinal::controlfinal(gato *g,ventanabotones *pantalla)
 {
     player = g;
     pant = pantalla;
-
     this->setPixmap(QPixmap(":/end.png"));
-
-    this->setGeometry(x,y,170,30);
+    this->setGeometry(x,y,ancho,alto);
     this->setParent(pant);
 }
 

@@ -1,11 +1,11 @@
 #include "lapiz.h"
 
-lapiz::lapiz(gato *g, punto *punt,ventanabotones *pantalla)
+lapiz::lapiz(gato *g,ventanabotones *pantalla)
 {
     ID = 'l';
+    name = "lapiz";
     player = g;
     pant = pantalla;
-    puntto = punt;
 
     this->setPixmap(QPixmap(":/lapiz.png"));
     this->setGeometry(x,y,ancho,alto);
@@ -16,14 +16,32 @@ lapiz::lapiz(gato *g, punto *punt,ventanabotones *pantalla)
 
 void lapiz::crearnuevoboton()
 {
-    lapiz *pencil = new lapiz(player,puntto,pant);
+    lapiz *pencil = new lapiz(player,pant);
     pencil->show();
     pant->addboton(pencil);
 }
 
 
+
 void lapiz::ejecutar()
 {
-   puntto->printpoint();
+    if (player->pincelabajo ==false)
+    {
+        player->pincelabajo = true;
+    }
+
+    else
+    {
+        player->pincelabajo = false;
+    }
+}
+
+QString lapiz::enviardatos()
+{
+
+}
+
+void lapiz::abrir(QTextStream &text)
+{
 
 }

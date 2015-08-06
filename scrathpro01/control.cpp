@@ -5,15 +5,15 @@ control::control(gato *g,ventanabotones *pantalla)
 {
     player = g;
     pant = pantalla;
-    ID = 'c';
+    ID = "c";
 
     this->setPixmap(QPixmap(":/repetir.png"));
 
-    this->setGeometry(x,y,170,30);
+    this->setGeometry(x,y,ancho,alto);
     this->setParent(pant);
 
     datos = new QTextEdit(this);
-    datos->setGeometry(100,2,48,25);
+    datos->setGeometry(tx,ty,tancho,talto);
 }
 
 

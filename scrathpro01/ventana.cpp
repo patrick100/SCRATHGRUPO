@@ -9,23 +9,24 @@ ventana::ventana()
     this->resize(1366,altop);
 
     botones = new ventanabotones(this);
-    programa = new ventanacat(this);
+    programa = new ventanacat(this,botones);
 
     //PARA MOSTRAR LOS BOTONES LOS INGRESO EN EL VECTOR DONDE EXISTE SHOW PERO PARA ELLO
     //TENGO QUE ENVIARLE EN SU CONSTRUCTOR DE BOTONES EL LA PANTALLA A LA QUE PERTENECE
 
-    move = new mover(programa->getcat(),programa->punt,botones);
+    move = new mover(programa->getcat(),botones);
     botones->addboton(move);
 
-
-    posc = new posicion(programa->getcat(),botones);
-    botones->addboton(posc);
 
     giroder = new girarder(programa->getcat(),botones);
     botones->addboton(giroder);
 
 
-    pincel = new lapiz(programa->getcat(),programa->getpunto(),botones);
+    posc = new posicion(programa->getcat(),botones);
+    botones->addboton(posc);
+
+
+    pincel = new lapiz(programa->getcat(),botones);
     botones->addboton(pincel);
 
     padre = new control(programa->getcat(),botones);
